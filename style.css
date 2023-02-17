@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root{
+    --Blue: hsl(223, 87%, 63%);
+
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+    position: relative;
+    padding: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+
+}
+
+header{
+    padding-bottom: 20px;
+}
+
+header img{
+    height: 20px;
+}
+
+.main-content{
+    padding: auto 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+}
+
+.main-content h1{
+    color: var(--Gray);
+    font-size: 40px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+h1 span{
+    color: var(--Very-Dark-Blue);
+    font-weight: 800;
+}
+
+.main-content h3{
+    color: var(--Very-Dark-Blue);
+    font-weight: 300;
+    font-size: 16px;
+}
+
+form{
+    padding: 30px;
+}
+
+form.error .error-message,
+form.success .success-message
+{
+    display: block;
+}
+
+#email-field{
+    width: 400px;
+    padding: 12px 20px 12px 17px;
+}
+
+#email-field::placeholder{
+    color: var(--Gray);
+}
+
+#email-field, select, textarea{
+    color: var(--Very-Dark-Blue);
+}
+
+#email-field:focus{
+    outline: none;
+}
+
+#email-field, #submit{
+    border-radius: 50px;
+    border: 1px solid var(--Pale-Blue);
+}
+
+#submit{
+   width: 130px;
+   padding: 12px 15px 12px 15px;
+   background-color: var(--Blue);
+   color: white;
+   cursor: pointer;
+}
+
+#submit:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    opacity: 0.7;
+}
+
+#submit:active{
+    background-color: var(--Very-Dark-Blue);
+}
+
+.error-message{
+    color: var(--Light-Red);
+}
+
+.success-message{
+    color: var(--Very-Dark-Blue);
+}
+
+.success-message, .error-message{
+    padding-top: 4px;
+    font-size: 0.8rem;
+    font-style: italic;
+    position: absolute;
+    margin-left: 20px;
+
+    display: none;
+}
+
+.image-container{
+    padding-top: 30px;
+    width: 530px;
+    padding-bottom: 60px;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;   
+}
+
+.facebook-button, .twitter-button, .Instagram-button{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.fa-brands{
+    margin: 2px 0 0 1px;
+    font-size: 18px;
+}
+
+.facebook-button:hover{
+    color: #4267B2;
+}
+
+.twitter-button:hover{
+    color: #1DA1F2;
+}
+
+.Instagram-button:hover{
+    color:#E1306C;
+}
+
+.copyright-tagline{
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: var(--Gray);
+    margin-bottom: 40px;
+}
+
+
+.attribution { 
+    position: absolute;
+    bottom: 0;
+    margin-left: -50px;
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px){
+
+    body{
+        margin: 30px auto;
+    }
+
+    header{
+        margin-top: 50px
+    }
+    .main-content{
+        width: 350px;
+    }
+
+    .main-content h1{
+        font-size: 23px;
+    }
+
+    .main-content h3{
+        font-size: 14px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    #email-field{
+        width: 300px;
+        padding: 12px 2px 12px 17px;
+        margin-left: -20px;
+    } 
+
+    #submit{
+        margin-top: 6px;
+        font-weight: 600;
+        width: 300px;
+        margin-left: -20px;
+    }
+
+    header img{
+        height: 19px;
+    }
+
+    .image-container{
+        padding-top: 30px;
+        width: 305px;
+        padding-bottom: 60px;
+    }
+
+    .success-message, .error-message{
+        margin-left: 2px;
+        top: 200px;
+    }
+
+    form.error #submit,
+    form.success #submit{
+        margin-top: 40px;
+    }
+}
+
+
+
